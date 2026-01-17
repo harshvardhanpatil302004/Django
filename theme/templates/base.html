@@ -1,0 +1,61 @@
+(DJANGO) PS D:\DJANGO\chai_aur_django> python --version
+>>
+Python 3.10.0
+(DJANGO) PS D:\DJANGO\chai_aur_django> python manage.py tailwind install
+>>
+
+added 92 packages, and audited 93 packages in 13s
+
+25 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> theme@4.2.0 build
+> npm run build:clean && npm run build:tailwind
+
+
+> theme@4.2.0 build:clean
+> rimraf ../static/css/dist
+
+
+> theme@4.2.0 build:tailwind
+> cross-env NODE_ENV=production postcss ./src/styles.css -o ../static/css/dist/styles.css --minify
+
+/*! 🌼 daisyUI 5.5.14 */
+Found 1 warning while optimizing generated CSS:
+
+│ }
+│ @layer base {
+│   @property --radialprogress {
+┆            ^-- Unknown at rule: @property
+┆
+│     syntax: "<percentage>";
+│     inherits: true;
+
+(DJANGO) PS D:\DJANGO\chai_aur_django> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django Tailwind</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
+
+    <div class="toast toast-top toast-end">
+        <div class="alert alert-info">
+            <span>Hello from daisyUi 👋</span>
+        </div>
+    </div>
+
+<div class="container mx-auto">
+    <section class="flex items-center justify-center h-screen">
+        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
+    </section>
+</div>
+</body>
+</html>
